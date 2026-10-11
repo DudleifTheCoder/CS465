@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="col-md-4">
+    <h2 class="text-center">Edit Trip</h2>
+
+    <form *ngIf="editForm" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Code:</label>
+        <input type="text" formControlName="code" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['code'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" formControlName="name" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Length:</label>
+        <input type="text" formControlName="length" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['length'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Start:</label>
+        <input type="date" formControlName="start" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['start'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Resort:</label>
+        <input type="text" formControlName="resort" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['resort'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Per Person:</label>
+        <input type="text" formControlName="perPerson" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['perPerson'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Image Name:</label>
+        <input type="text" formControlName="image" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['image'].errors }">
+      </div>
+
+      <div class="form-group">
+        <label>Description:</label>
+        <input type="text" formControlName="description" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['description'].errors }">
+      </div>
+
+      <button type="submit" class="btn btn-info mt-3">Save</button>
+    </form>
+  </div>
+</div>
